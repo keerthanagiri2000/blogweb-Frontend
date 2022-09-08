@@ -1,0 +1,19 @@
+.auth-form-container>form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 20px #ccc;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 912px){
+  .auth-form-container>form{
+    width: 80%;
+    margin-top: 5rem;
+  }
+}
