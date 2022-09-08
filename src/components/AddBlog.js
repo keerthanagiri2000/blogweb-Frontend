@@ -22,7 +22,7 @@ const Addblog = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .post("http://localhost:5000/api/blog/add", {
+      .post("https://blogweb-node.herokuapp.com/api/blog/add", {
         title: inputs.title,
         description: inputs.description,
         image: inputs.imageURL,
@@ -40,7 +40,7 @@ const Addblog = () => {
       .then((data) => console.log(data))
       .then(() => navigate("/"));
   };
-  console.log(inputs);
+  
 
   return (
     <div>

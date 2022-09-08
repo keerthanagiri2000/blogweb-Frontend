@@ -19,7 +19,7 @@ const BlogDetail = () => {
 
   const fetchDetails = async () => {
     const res = await axios
-      .get(`http://localhost:5000/api/blog/${id}`)
+      .get(`https://blogweb-node.herokuapp.com/api/blog/${id}`)
       .catch((err) => console.log(err));
 
     const data = await res.data;
@@ -39,7 +39,7 @@ const BlogDetail = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .put(`http://localhost:5000/api/blog/update/${id}`, {
+      .put(`https://blogweb-node.herokuapp.com/api/blog/update/${id}`, {
         title: inputs.title,
         description: inputs.description,
       })
@@ -52,7 +52,7 @@ const BlogDetail = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     sendRequest()
-      .then((data) => console.log(data))
+    .then((data) => console.log(data))
       .then(() => navigate("/myBlogs/"));
   };
 
